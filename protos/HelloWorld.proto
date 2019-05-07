@@ -1,0 +1,22 @@
+syntax = 'proto3';
+
+import "Common.proto";
+
+option java_multiple_files = true;//生成多个文件
+option java_package = "com.sxt.grpc.helloworld";//包名
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+service HelloWorld {
+    rpc SayHello (HelloReq) returns (HelloResp){}
+}
+message HelloReq {
+    string name = 1;
+    Status status = 2;
+}
+message HelloResp {
+    string message = 1;
+    Status status = 2;
+}

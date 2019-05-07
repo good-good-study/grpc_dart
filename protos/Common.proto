@@ -1,0 +1,11 @@
+syntax = 'proto3';
+
+option java_multiple_files = true;
+option java_package = "com.sxt.grpc.helloworld";
+option java_outer_classname = "Status";
+option objc_class_prefix = "HLW";
+
+enum Status {
+    REGISTER = 0;
+    UNREGISTER = 1;
+}
